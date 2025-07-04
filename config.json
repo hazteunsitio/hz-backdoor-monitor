@@ -1,0 +1,61 @@
+{
+    "_comentario": "Configuración HZ Backdoor Checker v2.0 - hazteunsitio.net",
+    
+    "rendimiento": {
+        "max_workers": 4,
+        "mostrar_progreso": true,
+        "tamaño_maximo_archivo_mb": 10
+    },
+    
+    "exportacion": {
+        "guardar_json": true,
+        "archivo_json": "hz-backdoor-resultados.json",
+        "archivo_html": "hz-backdoor-reporte.html"
+    },
+    
+    "seguridad": {
+        "verificar_hashes": true,
+        "nivel_log": "INFO"
+    },
+    
+    "archivos": {
+        "extensiones_personalizadas": [".js", ".ts", ".sql", ".cfg", ".ini"],
+        "carpetas_excluidas": [
+            "node_modules",
+            ".git",
+            "cache",
+            "logs",
+            "temp",
+            "__pycache__"
+        ]
+    },
+    
+    "deteccion": {
+        "patrones_personalizados": {
+            "comentario": "Añade aquí tus propios patrones regex",
+            "ejemplo_patron": "eval\\s*\\(",
+            "backdoor_personalizado": "mi_funcion_sospechosa"
+        },
+        "dominios_confiables_adicionales": [
+            "mi-servidor-confiable.com",
+            "api-legitima.net",
+            "cfx.re",
+            "fivem.net",
+            "citizenfx.net",
+            "discord.com",
+            "discordapp.com"
+        ]
+    },
+    
+    "interfaz": {
+        "mostrar_banner": true,
+        "mostrar_estadisticas_detalladas": true,
+        "color_consola": true
+    },
+    
+    "avanzado": {
+        "timeout_archivo_segundos": 30,
+        "reintentos_error": 3,
+        "debug_mode": false
+    }
+}
